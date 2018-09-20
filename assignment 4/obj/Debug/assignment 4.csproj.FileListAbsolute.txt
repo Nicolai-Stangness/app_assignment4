@@ -1,0 +1,6 @@
+H:\aut-2004\assignment 4\assignment 4\bin\Debug\assignment 4.exe.config
+H:\aut-2004\assignment 4\assignment 4\bin\Debug\assignment 4.exe
+H:\aut-2004\assignment 4\assignment 4\bin\Debug\assignment 4.pdb
+H:\aut-2004\assignment 4\assignment 4\obj\Debug\assignment 4.csprojResolveAssemblyReference.cache
+H:\aut-2004\assignment 4\assignment 4\obj\Debug\assignment 4.exe
+H:\aut-2004\assignment 4\assignment 4\obj\Debug\assignment 4.pdb
