@@ -10,26 +10,30 @@ namespace assignment4
     {
         static void Main(string[] args)
         {
-            sensor sensor_1 = new sensor(25, 66, 133, 1);
-            Console.WriteLine("sensor_1:: temp = {0}", sensor_1.read_temp());
+            sensor sensor_1 = new sensor(25, 66, 133, 0);
+            Console.WriteLine("sensor_1:: temp = {0}, hum = {1}, co2 ={2}", sensor_1.read_temp(), sensor_1.read_hum(), sensor_1.read_co2());
 
-            sensor sensor_2 = new sensor(20, 33, 300, 1);
+            sensor sensor_2 = new sensor(20, 33, 300, 0);
+            Console.WriteLine("sensor_2:: temp = {0}, hum = {1}, co2 ={2}", sensor_2.read_temp(), sensor_2.read_hum(), sensor_2.read_co2());
 
-            Console.WriteLine("sensor_2:: temp = {0}", sensor_2.read_temp());
+            sensor sensor_3 = new sensor(15, 45, 241, 0);
+            Console.WriteLine("sensor_3:: temp = {0}, hum = {1}, co2 ={2}", sensor_3.read_temp(), sensor_3.read_hum(), sensor_3.read_co2());
 
-            sensor sum = sensor_1 + sensor_2;
+
+            sensor sum = sensor_1 + sensor_2 + sensor_3;
             sensor diff = sensor_1 - sensor_2;
             sensor_1 = sensor_1++;
 
-            sensor divisor = new sensor(2, 2, 2, 2);
+            sensor divisor = new sensor(3, 3, 3, 3);
             sensor average = sum / divisor;
 
-            Console.WriteLine("sum of temp is {0}, average of co2 is {1}", sum.read_temp(),average.read_co2());
-            Console.WriteLine("difference of temp is {0}", diff.read_temp());
+            Console.WriteLine("sum of temp is {0}, sum of hum is {2}, sum of co2 is {1}", sum.read_temp(),sum.read_co2(),sum.read_hum());
+            Console.WriteLine("difference of temp 1 and 2 is {0}", diff.read_temp());
+            Console.WriteLine("average of temp is {0}, average of hum is {2}, average of co2 is {1}", average.read_temp(), average.read_co2(), average.read_hum());
 
             sensor_1 = sensor_1++;
 
-            Console.WriteLine("count is at {0}, abd temp is at {1}", sensor_1.read_count(),sensor_1.read_temp());
+            Console.WriteLine("count is at {0}", sensor_1.read_count());
             sensor_1 = sensor_1--;
             Console.WriteLine("oh wait, that's one too many counts count is really at {0}", sensor_1.read_count());
             Console.ReadKey();
